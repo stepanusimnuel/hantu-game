@@ -1,0 +1,38 @@
+<!-- === public/index.html === 
+A minimal UI to connect, set name, see players, and start the game. -->
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Hantu (Booth) — Deck & Distribution MVP</title>
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <h1>Hantu 👻 (Booth) — Demo</h1>
+    <div id="status">Connecting...</div>
+
+    <!-- Controls -->
+    <div id="controls">
+      <input id="nameInput" placeholder="Enter your name" />
+      <button id="setNameBtn">Set Name</button>
+      <button id="startBtn">Start Game</button>
+    </div>
+
+    <!-- Game Table -->
+    <div id="table">
+      <div id="playersContainer"></div>
+      <div id="centerDeck"></div>
+      <div id="discardPile"></div>
+    </div>
+
+    <!-- Your Hand -->
+    <div id="yourHand"></div>
+    <div id="opponentsHands"></div>
+
+    <pre id="log"></pre>
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
